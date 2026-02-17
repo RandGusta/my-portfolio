@@ -13,21 +13,20 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-       <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap" rel="stylesheet">
         </head>
     <body>
         <div class="estrelas-container"></div>
         <header>
+            <section id="inicio">
             <div class="comprimento">
             <h1>Welcome to my space!</h1>
+            </section>
             </div>
-            <nav  class="navbar">
+        </header>
+        <nav  class="navbar">
                 <ul class ="navLinks">
                     <li>
-                        <a  href="#">Home</a>
+                        <a  href="#inicio">Home</a>
                     </li>
                     <li>
                         <a href="#">Projects</a>
@@ -37,7 +36,6 @@
                     </li>
                 </ul>
                 </nav>
-        </header>
         <main>
             <section id="Sobre_mim">
                 <div class="sobre_mim">
@@ -50,13 +48,49 @@
                     <p>Software engenering student at&nbsp;<a href="https://ifpr.edu.br" target="blanck">Institute of Paraná - Brazil</a></p>
                     <p>currently working as a Developer at&nbsp;<a href="https://unimake.com.br/" target="blanck">Unimake Software</a>.</p>
                 </div>
-                <div class="curiosidade">
-                    <h2>Funfacts</h2>
                 </div>
+                <div class="curiosidade">
+                    <h2>Funfacts 
+                        <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+  <!--contorno -->
+  <rect x="4" y="0" width="12" height="1" fill="#CFF8FF"/>
+  <rect x="3" y="1" width="14" height="1" fill="#CFF8FF"/>
+  <rect x="2" y="2" width="16" height="1" fill="#CFF8FF"/>
+  <rect x="1" y="3" width="18" height="1" fill="#CFF8FF"/>
+  <rect x="0" y="4" width="20" height="12" fill="#CFF8FF"/>
+  <rect x="1" y="16" width="18" height="1" fill="#CFF8FF"/>
+  <rect x="2" y="17" width="16" height="1" fill="#CFF8FF"/>
+  <rect x="3" y="18" width="14" height="1" fill="#CFF8FF"/>
+  <rect x="4" y="19" width="12" height="1" fill="#CFF8FF"/>
+
+  <!--rosto-->
+  <rect x="2" y="4" width="16" height="12" fill="#CFF8FF"/>
+
+  <!--olho-->
+  <rect x="5" y="7" width="3" height="4" fill="black"/>
+  <rect x="12" y="7" width="3" height="4" fill="black"/>
+
+  <!--boca-->
+  <rect x="4" y="12" width="12" height="2" fill="black"/>
+  <rect x="6" y="13" width="8" height="2" fill="black"/>
+  <rect x="8" y="14" width="4" height="2" fill="black"/>
+  <rect x="9" y="15" width="2" height="2" fill="black"/>
+</svg>
+
+                    </h2>
+                </div>
+                <div class="caixa-curiosidade">
+                    <p>- Systems over aesthetics</p>
+                    <p>- Backend-oriented</p>
+                    <p>- Debugging is my comfort zone</p>
+                    <p>- Progress over perfection</p>
+                </div>
+            <!-- <div class="foto-container">
+                <img src="assets\perfilCyber.png" class="foto-cyber">
+            </div> -->
             </section>
         </main>
         <script src="js/script.js"></script>
-
         <footer>
             <div class="follow-container">
             <p>Follow me</p>
@@ -67,7 +101,6 @@
                             <path fill="currentColor" d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"/>
                         </svg>
                 </a>
-
                 <a href="https://github.com/RandGusta" target="_blank" class="github-link">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="github-logo">
                             <path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.26.82-.577 0-.285-.01-1.04-.016-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.334-1.756-1.334-1.756-1.09-.745.082-.73.082-.73 1.205.084 1.84 1.238 1.84 1.238 1.07 1.835 2.807 1.305 3.492.998.108-.775.418-1.305.76-1.605-2.665-.3-5.467-1.335-5.467-5.93 0-1.31.468-2.38 1.236-3.22-.124-.303-.536-1.523.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 0 1 3-.404c1.02.004 2.046.138 3 .404 2.288-1.552 3.294-1.23 3.294-1.23.655 1.653.243 2.873.12 3.176.77.84 1.236 1.91 1.236 3.22 0 4.61-2.807 5.625-5.48 5.922.43.37.81 1.096.81 2.21 0 1.596-.015 2.884-.015 3.274 0 .32.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>

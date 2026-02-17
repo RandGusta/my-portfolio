@@ -1,6 +1,6 @@
 const container = document.querySelector('.estrelas-container');
 
-function criarEstrela(){
+function criarEstrela(x, y){
     const estrela = document.createElement('div'); // cria um novo elemento div
     estrela.classList.add('estrela'); // adiciona a classe estrela do CSS
 
@@ -8,24 +8,32 @@ function criarEstrela(){
     inner.classList.add('estrela-inner'); // aplica as informações da classe do CSS
     estrela.appendChild(inner);
 
-    const size = Math.random() * 20 + 10;
+    const size = Math.random() * 15 + 5;
     estrela.style.width = size + 'px';
     estrela.style.height = size + 'px';
 
-    estrela.style.left = Math.random() * window.innerWidth + 'px';
-    estrela.style.bottom = '-50px';
+    estrela.style.left = x + 'px';
+    estrela.style.top = y + 'px';
 
     container.appendChild(estrela);
 
-    const duracao = Math.random() * 5 + 5;
-    estrela.style.transition = `transform ${duracao}s linear, opacity 2s linear`;
+    estrela.style.transition = `transform 0.8s linear, opacity 0.8s linear`;
 
     setTimeout(()=>{
-        estrela.style.transform = `translateY(-${window.innerHeight + 50}px)`;
+        estrela.style.transform = `translateY(-30px)`;
         estrela.style.opacity = 0;
-    }, 50);
+    }, 10);
 
-    setTimeout(()=> estrela.remove(), duracao * 10000000 + 100);
+    setTimeout(()=> {estrela.remove();},800);
 }
 
-setInterval(criarEstrela, 500);
+let ultimoTempo = 0; // guardar quando a ultima estrela foi criada
+document.addEventListener("mousemove", function(e){ // e--> objeto
+    const momentoAtual = Date.now();
+
+    if(momentoAtual - ultimoTempo > 60){ // 80ms entre cada uma 
+    criarEstrela(e.clientX, e.clientY);// posição horizontal e  vertical do mouse
+    ultimoTempo = momentoAtual;    
+    }
+     
+});

@@ -25,7 +25,7 @@ function criarEstrela(){
         estrela.style.opacity = 0;
     }, 50);
 
-    setTimeout(()=> estrela.remove(), duracao * 1000 + 100);
+    setTimeout(()=> estrela.remove(), duracao * 10000000 + 100);
 }
 
 setInterval(criarEstrela, 500);

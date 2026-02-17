@@ -1,29 +1,68 @@
 body{
-    background-color: rgb(103,125,106);
-    font-family: 'Roboto', sans-serif;
-    color:rgb(250,243,224);
+    background-color: #000500;
+    font-family: 'Bitcount Grid Double', sans-serif;
+    color:#990033;
 }
 
+
 p{
-    font-size: 12px;
+    font-size: 15px;
     margin: 1px 0;
+}
+
+.resumo{
+    font-size: 15px;
+    margin: 1px 0;
+    border: 0.5px solid #990033;
+    padding: 10px;
+}
+
+
+.curiosidade{
+  display: flex;
+  position: absolute;
+  left: 850px;
+  bottom: 500px;
+  border: 3px solid #990033;
+  width: 290px;
+}
+
+h2{
+        margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.nome{
+    border: 3px solid #990033;
+    padding: 6px;
 }
 
 footer {
     display: flex;             /* ativa flexbox */
     justify-content: flex-end; /* alinha horizontalmente à direita */
     align-items: flex-end;     /* alinha verticalmente na parte de baixo */
-    height: 100px;             /* altura do footer */
+    height: 2000px;             /* altura do footer */
     padding: 10px;             /* espaço interno */
+    font-family: 'Bitcount Grid Double', sans-serif;
 }
 
 a{
-    color: rgb(26, 54, 54);
+    color: #990033;
 }
 
 h1 {
+    font-size: 30px;
     margin: 0;
+
 }
+
+
+.comprimento{
+    border: 3px solid #990033;
+    padding: 10px;
+}
+
 
 main {
     height: 60vh;
@@ -36,11 +75,11 @@ main {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: rgb(26, 54, 54);
+    background-color: #000500;
     color:rgb(221,222,238);
-    box-shadow: 0 2px 5px rgb(0,0,0,0.3);
-    border-radius: 40px;
+    border: 1px solid #990033;
+    padding: 6px;
+    position: fixed;
 }
 
 .navLinks {
@@ -61,14 +100,14 @@ main {
 
 .navLinks li a{
     text-decoration: none;
-    color:rgb(250,243,224);
+    color:#990033;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 .navLinks a:hover {
-    background-color: rgb(250,243,224);
-    color: rgb(26, 54, 54);
+    background-color: #990033;
+    color: #000500;
 }
 
 
@@ -89,6 +128,9 @@ main {
     height: 20px; 
     pointer-events: none;
     transform-origin: center;
+    border-radius: 50%;
+    /* box-shadow: 0 0 5px rgb(242, 112, 112); */
+    
 }
 
 .estrela-inner {
@@ -96,8 +138,7 @@ main {
     width: 20px;
     height: 20px;
     border-radius: 0%;
-    background: rgb(26, 54, 54);
-    box-shadow: 0 0 10px rgb(76, 87, 96);
+    background: #990033;
     pointer-events: auto;
     transform-origin: center;
 
@@ -116,6 +157,8 @@ main {
     );
     transform-origin: center;
     animation: spin 2s linear infinite;
+    filter: drop-shadow(0 0 10px rgb(242,112,112));
+    
 }
 
 @keyframes spin {
@@ -128,10 +171,58 @@ main {
     opacity: 0.8;
 }
 
+.barra{
+    width: 1027px;
+    height: 2px;
+    background-color: #990033;
+    margin: 5px auto;
+    border:none; 
+}
 
 .linkedin-logo{
     width: 30px;
     height: 30px;
-    object-fit: contain;
-
+    color: #990033;
 }
+
+
+.linkedin-link:hover .linkedin-logo{
+    color: #000500;
+    background-color: #800020;
+}
+
+.github-logo{
+    width: 30px;
+    height: 30px;
+    color:#990033;
+}
+
+.github-link:hover .github-logo{
+    color: #000500;
+    background-color: #800020;
+}
+
+
+.follow-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+hr{
+    width: 120px;
+    height: 2px;
+    background-color: #990033;
+    margin: 5px auto;
+    border:none;
+}
+
+

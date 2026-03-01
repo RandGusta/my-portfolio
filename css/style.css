@@ -1,313 +1,61 @@
+:root{
+    --background-color:#000500; 
+    --text-color: #CFF8FF;
+    --link-interaction-color: #e6eef1;
+    --border-element: 2px dotted #CFF8FF;
+
+}
+
 body{
-    background-color: #000500;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    cursor: url("../assets/mousecontornado.png") 0 0, auto;
     font-family: 'Bitcount Grid Double', sans-serif;
-    color:#CFF8FF;
-    margin: 20px;                    /* espaço da borda até a tela */
-    border: 2px dotted #CFF8FF; 
+    color: var(--text-color);
+    margin: 20px;
 }
 
-
-
-.sobre_mim{
-    display: flex; /*div vira um container flexivel --> controle total do eixo*/
-    flex-direction: column; /*eixo principal em coluna*/
-    padding: 20px; 
-}
-
-p{
-    font-size: 15px;
-    margin: 1px 0;
-}
-
-.resumo{
-    font-size: 15px;
-    margin: 1px 0;
-    border: 2px dotted #CFF8FF;
-    padding: 10px;
-}
-
-
-.curiosidade{
-  display: flex;
-  position: absolute;
-  left: 850px;
-  bottom: 500px;
-  border: 4px solid #CFF8FF;
-  width: 286px;
-  background-color: #000500;
-}
-
-.curiosidade::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 100%;
-    height: 100%;
-    border: 4px solid #CFF8FF;
-    z-index: -1;
-}
-
-.caixa-curiosidade{
-  display: flex;
-  position: absolute;
-  left: 850px;
-  bottom: 415px;
-  border: 2px dotted #CFF8FF;
-  width: 290px;
-  flex-direction: column;
-  background-color: #000500;
-}
-
-.caixa-curiosidade::before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100%;
-    height: 100%;
-    border: 2px dotted #CFF8FF;
-    z-index: -1;
-}
-
-
-
-h2{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-}
-
-.nome{
-    border: 3px solid #CFF8FF
-
-
-;
-    padding: 6px;
-}
-
-footer {
-    display: flex;             /* ativa flexbox */
-    justify-content: flex-end; /* alinha horizontalmente à direita */
-    align-items: flex-end;     /* alinha verticalmente na parte de baixo */
-    height: 4000px;             /* altura do footer */
-    padding: 10px;             /* espaço interno */
-    font-family: 'Bitcount Grid Double', sans-serif;
-}
 
 a{
-    color: #CFF8FF
-
-
-;
+    color: var(--text-color);
 }
 
-h1 {
-    font-size: 30px;
-    margin: 0;
-
+a:hover{
+    color: var(--link-interaction-color);
 }
 
 
-.comprimento{
-    border: 3px solid #CFF8FF
-
-
-;
-    padding: 10px;
+.navbar-hover:hover{
+    color: var(--background-color);
+    background-color: var(--text-color);
+    
 }
 
-
-main {
-    height: 60vh;
+nav{
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    border: var(--border-element);
+    width: fit-content;
+    height: 47px;
+    margin-top: 0%;
+
 }
 
-.navbar{
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #000500;
-    color:rgb(221,222,238);
-    border: 1px dotted #CFF8FF;
-    padding: 6px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: 0.3s;
+nav ul{
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    padding:2px;
+    margin-top: 2%;
+    margin-bottom: 0%;
 }
 
-.navLinks {
-   list-style: none;
-   display: flex;
-   gap: 20px;
-   flex-direction: row;
-   margin: 0;
-   padding: 0;
-}
-.navLinks a{
-    text-decoration: none;   
-    color: rgb(250,243,224);           
-    padding: 5px 10px;       
-    border-radius: 5px;      
-    transition: 0.3s;   
-}
-
-.navLinks li a{
+nav a{
     text-decoration: none;
-    color:#CFF8FF
-
-
-;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 10;
 }
 
-.navLinks a:hover {
-    background-color: #CFF8FF
-
-
-;
-    color: #000500;
+header h1{
+    border: var(--border-element);
+    margin-bottom: 0%;
+    padding-left: 2%;
 }
-
-
-.estrelas-container{
-    position: fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    pointer-events:none; /* não atrapalha clicks */
-    overflow: hidden; 
-    z-index: 0; /* atras do conteudo */
-}
-
-.estrela {
-    position: absolute;
-    width: 20px; 
-    height: 20px; 
-    pointer-events: none;
-    transform-origin: center;
-    border-radius: 50%;
-    /* box-shadow: 0 0 5px rgb(242, 112, 112); */
-    
-}
-
-.estrela-inner {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    border-radius: 0%;
-    background: #CFF8FF
-
-
-;
-    pointer-events: auto;
-    transform-origin: center;
-
-    /* Forma de estrela */
-    clip-path: polygon(
-        50% 0%, 
-        61% 35%, 
-        98% 35%, 
-        68% 57%, 
-        79% 91%, 
-        50% 70%, 
-        21% 91%, 
-        32% 57%, 
-        2% 35%, 
-        39% 35%
-    );
-    transform-origin: center;
-    animation: spin 2s linear infinite;
-    filter: drop-shadow(0 0 10px rgb(242,112,112));
-    
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-.bolha:hover {
-    transform: scale(1.5) translateY(-10px);
-    opacity: 0.8;
-}
-
-.barra{
-    width: 1027px;
-    height: 2px;
-    background-color: #CFF8FF
-
-
-;
-    margin: 5px auto;
-    border:none; 
-}
-
-.linkedin-logo{
-    width: 30px;
-    height: 30px;
-    color: #CFF8FF
-
-
-;
-}
-
-
-.linkedin-link:hover .linkedin-logo{
-    color: #000500;
-    background-color: #CFF8FF
-;
-}
-
-.github-logo{
-    width: 30px;
-    height: 30px;
-    color:#CFF8FF
-
-
-;
-}
-
-.github-link:hover .github-logo{
-    color: #000500;
-    background-color: #CFF8FF
-;
-}
-
-
-.follow-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.profile-container{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-
-hr{
-    width: 120px;
-    background-color: #CFF8FF;
-    margin: 5px auto;
-    border: 2px dotted;
-}
-
-/* 
-.foto-container{
-    width: 200px;
-    height: 300px;
-}
-
-.foto-cyber {
-    position: relative;
-    animation: glitch 2s infinite;
-} */

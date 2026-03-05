@@ -3,16 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>my-portifolio</title>
-        <link rel="stylesheet" href="refatoracao.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
     </head>
     <body>
+        <div class="site-wrapper">
         <header>
             <section id="home">
              <h1>Welcome to my space!</h1>
             </section>
+        </header>
         <nav>
             <ul>
                 <li>
@@ -29,18 +31,24 @@
                 </li>
             </ul>
         </nav>
-        </header>
         <main>
+            <section class="intro-funfacts-wrapper">
             <section>
                 <br>
-                <h1>Gustavo Randi</h1>
-                <p>Always searching for evolve and improve. <br>
-                Software Engenering student at&nbsp;<a href="https://ifpr.edu.br" target="_blank">Institute of Paraná - Brazil</a>
+                <h1 class="intro-title">Gustavo Randi</h1>
+                <p class="intro-summary">Always searching for evolve and improve. <br>
+                Software Engenering student at&nbsp;<a href="https://ifpr.edu.br" target="_blank">Institute of Paraná - Brazil <br></a>
                 currently working as a Developer at&nbsp;<a href="https://unimake.com.br" target="_blank">Unimake Software</a></p>
             </section>
-            <section>
-                <h2>Funfacts</h2>
-                <p>- Systems over aesthetics <br>- Backend-oriented <br>- Debegging is my comfort zone <br>- Progress over perfection</p>
+            <section class="funfacts">
+                <h2 class="funfacts-title">Funfacts</h2>
+               <ul class="funfacts-summary">
+                    <li>- Systems over aesthetics</li>
+                    <li>- Backend-oriented</li>
+                    <li>- Debugging is my comfort zone</li>
+                    <li>- Progress over perfection</li>
+                </ul>
+            </section>
             </section>
             <section id="projects">
                 <h1>Projects</h1>
@@ -78,5 +86,6 @@
                 <h1>Follow me</h1>
             </footer>
         </main>
+        </div>
     </body>
 </html>

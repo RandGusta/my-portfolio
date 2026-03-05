@@ -2,7 +2,8 @@
     --background-color:#000500; 
     --text-color: #CFF8FF;
     --link-interaction-color: #e6eef1;
-    --border-element: 2px dotted #CFF8FF;
+    --border-element-dotted: 2px dotted #CFF8FF;
+    --border-element-solid: 2px solid #CFF8FF;
 
 }
 
@@ -12,7 +13,12 @@ body{
     cursor: url("../assets/mousecontornado.png") 0 0, auto;
     font-family: 'Bitcount Grid Double', sans-serif;
     color: var(--text-color);
-    margin: 20px;
+}
+
+.site-wrapper{
+    border: var(--border-element-dotted);
+    padding: 20px;
+    padding-top: 0px;
 }
 
 
@@ -29,33 +35,108 @@ a:hover{
     color: var(--background-color);
     background-color: var(--text-color);
     
+    
 }
 
 nav{
     display: flex;
-    border: var(--border-element);
+    border: var(--border-element-dotted);
     width: fit-content;
-    height: 47px;
-    margin-top: 0%;
-
+    height: 37px;
+    margin-left: -20px;
+    position: sticky;
+    top: 3px;
+    background-color: var(--background-color);
 }
 
 nav ul{
     display: flex;
     gap: 50px;
     list-style: none;
-    padding:2px;
+    padding:1px;
     margin-top: 2%;
     margin-bottom: 0%;
+    
+
 }
 
 nav a{
     text-decoration: none;
-    padding: 10;
+    padding: 5;
 }
 
 header h1{
-    border: var(--border-element);
+    border: var(--border-element-solid);
     margin-bottom: 0%;
+    padding-top: 20px;
     padding-left: 2%;
+    margin-top: 0px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+    
+
+
+
+nav li{
+    padding: 0;
+}
+
+
+.intro-title{
+    border: var(--border-element-solid);
+    margin-bottom: 0%;
+    margin-top: 150;
+    width: 424;
+    padding: 5;
+
+}
+
+.intro-summary{
+    border: var(--border-element-dotted);
+    margin-top: 0;
+    padding: 10;
+    width: fit-content;
+}
+
+.intro-funfacts-wrapper{
+    display: flex;
+    gap: 250px;
+}
+
+.funfacts{
+    position: relative;
+}
+
+.funfacts::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate(12px, 12px);
+    border-top: var(--border-element-solid);
+    border-bottom:var(--border-element-solid);;
+    border-left: var(--border-element-dotted);;
+    border-right:var(--border-element-dotted);;
+}
+
+
+.funfacts-title{
+    border: var(--border-element-solid);
+    margin-bottom: 0px;
+    padding-right: 150px;
+    padding-left: 20;
+    background-color: var(--background-color);
+}
+
+.funfacts-summary{
+    border: var(--border-element-dotted);
+    margin-top: 0px;
+    padding-bottom: 20px;
+    padding-left: 10;
+    background-color: var(--background-color);
+}
+
+.funfacts-summary li{
+    line-height: 2;
+    list-style: none;
 }

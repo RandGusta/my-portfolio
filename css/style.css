@@ -10,7 +10,7 @@
 body{
     color: var(--text-color);
     background-color: var(--background-color);
-    cursor: url("../assets/mousecontornado.png") 0 0, auto;
+    cursor: url("../assets/images/mousecontornado.png") 0 0, auto;
     font-family: 'Bitcount Grid Double', sans-serif;
     color: var(--text-color);
 }
@@ -108,17 +108,6 @@ nav li{
     position: relative;
 }
 
-.funfacts::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    transform: translate(12px, 12px);
-    border-top: var(--border-element-solid);
-    border-bottom:var(--border-element-solid);;
-    border-left: var(--border-element-dotted);;
-    border-right:var(--border-element-dotted);;
-}
-
 
 .funfacts-title{
     border: var(--border-element-solid);
@@ -126,6 +115,17 @@ nav li{
     padding-right: 150px;
     padding-left: 20;
     background-color: var(--background-color);
+    position: relative;
+}
+
+.funfacts-title::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate(30px, 15px);
+    border:var(--border-element-solid);;
+    z-index: -1;
+
 }
 
 .funfacts-summary{
@@ -134,7 +134,18 @@ nav li{
     padding-bottom: 20px;
     padding-left: 10;
     background-color: var(--background-color);
+    position: relative;
 }
+
+.funfacts-summary::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translate(30px, 12px);
+    border:var(--border-element-dotted);
+    z-index: -1;
+}
+
 
 .funfacts-summary li{
     line-height: 2;

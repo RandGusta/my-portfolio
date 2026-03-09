@@ -87,8 +87,8 @@ nav li{
     border: var(--border-element-solid);
     margin-bottom: 0%;
     margin-top: 150;
-    width: 424;
-    padding: 5;
+    width: 567;
+    padding: 10;
 
 }
 
@@ -150,4 +150,63 @@ nav li{
 .funfacts-summary li{
     line-height: 2;
     list-style: none;
+}
+
+
+.repository-card h3{
+    background-color: var(--background-color);
+    border: var(--border-element-solid);
+    text-align: center;
+    word-break: break-word;
+    margin-top: 0px;
+    height: 53px;
+    padding: 10px ;
+
+}
+
+.repository-card a{
+  display: inline-block;
+  padding: 6px 85px;
+  background-color: #CFF8FF;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+.repository-card p{
+  min-height: 40px;
+}
+
+
+.repository-card{
+    width: 260px;
+    min-width: 270px;
+    border: var(--border-element-dotted);
+    height: 252px;
+    text-align: center;
+}
+
+#repositories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:90px;
+    overflow-x:auto ;
+}
+
+
+.code-icon{
+    display: block;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    padding-left:100px;
+}
+
+
+#projects h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

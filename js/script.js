@@ -1,39 +1,41 @@
-const container = document.querySelector('.estrelas-container');
 
-function criarEstrela(x, y){
-    const estrela = document.createElement('div'); // cria um novo elemento div
-    estrela.classList.add('estrela'); // adiciona a classe estrela do CSS
+fetch("https://api.github.com/orgs/university-projects-gustavo/repos")
+    .then(response => response.json())
+    .then(data => {
+        const repositoryContainer = document.getElementById("repositories");
 
-    const inner = document.createElement('div'); // estrela que vai girar
-    inner.classList.add('estrela-inner'); // aplica as informações da classe do CSS
-    estrela.appendChild(inner);
+        data.forEach(repository => {
+               const cardRepository = document.createElement("div");
+               cardRepository.classList.add("repository-card");
 
-    const size = Math.random() * 15 + 5;
-    estrela.style.width = size + 'px';
-    estrela.style.height = size + 'px';
 
-    estrela.style.left = x + 'px';
-    estrela.style.top = y + 'px';
+               const h3 = document.createElement("h3");
+               h3.textContent = repository.name;
 
-    container.appendChild(estrela);
+               const p = document.createElement("p");
+               p.textContent = repository.description || "Still loading...";
 
-    estrela.style.transition = `transform 0.8s linear, opacity 0.8s linear`;
 
-    setTimeout(()=>{
-        estrela.style.transform = `translateY(-30px)`;
-        estrela.style.opacity = 0;
-    }, 10);
+               const a = document.createElement("a");
+               a.textContent = "Check it out";
+               a.href = repository.html_url;
+               a.target = "_blank";
 
-    setTimeout(()=> {estrela.remove();},800);
-}
+               const img = document.createElement("img");
+               img.classList.add("code-icon");
+               img.src = "assets/svg/engrenagem.svg";
+               img.alt = "simbulo de maior, barra e simbulo de menor"
+               
 
-let ultimoTempo = 0; // guardar quando a ultima estrela foi criada
-document.addEventListener("mousemove", function(e){ // e--> objeto
-    const momentoAtual = Date.now();
+                cardRepository.appendChild(h3);
+                cardRepository.appendChild(p);
+                cardRepository.appendChild(img);
+                cardRepository.appendChild(a);
+                
 
-    if(momentoAtual - ultimoTempo > 60){ // 80ms entre cada uma 
-    criarEstrela(e.clientX, e.clientY);// posição horizontal e  vertical do mouse
-    ultimoTempo = momentoAtual;    
-    }
-     
-});
+                repositoryContainer.appendChild(cardRepository);
+
+        })
+
+
+    })

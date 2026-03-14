@@ -14,11 +14,11 @@ fetch("https://api.github.com/orgs/university-projects-gustavo/repos")
                h3.textContent = repository.name;
 
                const p = document.createElement("p");
-               p.textContent = repository.description || "Still loading...";
+               p.textContent = repository.description || "Still loading";
 
 
                const a = document.createElement("a");
-               a.textContent = "Check it out";
+               a.textContent = "./repos";
                a.href = repository.html_url;
                a.target = "_blank";
 

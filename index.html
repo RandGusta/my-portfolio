@@ -1,18 +1,22 @@
 <!DOCTYPE>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>my-portifolio</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="site-wrapper">
+
+<head>
+    <meta charset="UTF-8">
+    <title>my-portifolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="site-wrapper">
         <header>
             <section id="home">
-             <h1>Welcome to my space!</h1>
+                <h1>Welcome to my space!</h1>
             </section>
         </header>
         <nav>
@@ -33,54 +37,74 @@
         </nav>
         <main>
             <section class="intro-funfacts-wrapper">
-            <section>
-                <br>
-                <h1 class="intro-title">Gustavo Randi</h1>
-                <p class="intro-summary">Always searching for evolve and improve. <br>
-                Software Engenering student at&nbsp;<a href="https://ifpr.edu.br" target="_blank">Institute of Paraná - Brazil <br></a>
-                currently working as a Developer at&nbsp;<a href="https://unimake.com.br" target="_blank">Unimake Software</a></p>
-            </section>
-            <section class="funfacts">
-                <h2 class="funfacts-title">Funfacts</h2>
-               <ul class="funfacts-summary">
-                    <li>- Systems over aesthetics</li>
-                    <li>- Backend-oriented</li>
-                    <li>- Debugging is my comfort zone</li>
-                    <li>- Progress over perfection</li>
-                </ul>
-            </section>
+                <section>
+                    <br>
+                    <h1 class="intro-title">Gustavo Randi</h1>
+                    <p class="intro-summary">Always searching for evolve and improve. <br>
+                        Software Engenering student at&nbsp;<a href="https://ifpr.edu.br" target="_blank">Institute of
+                            Paraná - Brazil <br></a>
+                        currently working as a Developer at&nbsp;<a href="https://unimake.com.br"
+                            target="_blank">Unimake Software</a></p>
+                </section>
+                <section class="funfacts">
+                    <h2 class="funfacts-title">Funfacts</h2>
+                    <ul class="funfacts-summary">
+                        <li>- Systems over aesthetics</li>
+                        <li>- Backend-oriented</li>
+                        <li>- Debugging is my comfort zone</li>
+                        <li>- Progress over perfection</li>
+                    </ul>
+                </section>
             </section>
             <section id="projects">
                 <h1>Projects</h1>
-                <button class="scroll-left">
-                    <a>
-                        <img src="assets/images/scroll-left.png" alt="botao para ir a esquerda">
-                    </a>
-                </button>
-                <div id="repositories"></div>
-                <button class="scroll-right">
-                    <a>
-                        <img src="assets/images/scroll-right.png" alt="botão para ir a direita">
-                    </a>
-                </button>
+                <div class="projects-scroll">
+                    <button class="scroll-left">
+                        <a>
+                            <img src="assets/images/scroll-left.png" alt="botao para ir a esquerda">
+                        </a>
+                    </button>
+                    <div id="repositories"></div>
+                    <button class="scroll-right">
+                        <a>
+                            <img src="assets/images/scroll-right.png" alt="botão para ir a direita">
+                        </a>
+                    </button>
+                </div>
             </section>
             <section id="about_me">
                 <h1>About me</h1>
                 <p>
-                Today, I am focused on improving my development skills, building real-world projects, and learning new technologies, as well as strengthening soft skills such as communication, leadership, and empathy.
-                I am looking for opportunities that can expose me to real-world challenges and help me grow as a developer.
-                I believe that consistency beats intensity, and I am committed to becoming better every day, both technically and personally.
+                    Today, I am focused on improving my development skills, building real-world projects, and learning
+                    new technologies, as well as strengthening soft skills such as communication, leadership, and
+                    empathy.
+                    I am looking for opportunities that can expose me to real-world challenges and help me grow as a
+                    developer.
+                    I believe that consistency beats intensity, and I am committed to becoming better every day, both
+                    technically and personally.
                 </p>
                 <p>
-                I am also interested in understanding agile methodologies and how teams collaborate effectively. 
-                In the future, I would like to take on more leadership responsibilities as I gain experience.
+                    I am also interested in understanding agile methodologies and how teams collaborate effectively.
+                    In the future, I would like to take on more leadership responsibilities as I gain experience.
                 </p>
             </section>
-            <footer>
-                <h1>Follow me</h1>
+            <footer id="contact">
+                <div class="contact-footer">
+                    <h2>Follow me</h2>
+                    <div class="contact-bnt">
+                        <a href="">
+                            <img src="assets/svg/linkedin.svg" alt="botão para acessar LinkedIn">
+                        </a>
+                        <a href="">
+                            <img src="assets/svg/github.svg" alt="botão para acessar GitHub">
+                        </a>
+                    </div>
+                    <p>It was nice to met ya!</p>
+                </div>
             </footer>
         </main>
-        </div>
-        <script type="module" src="js/main.js"></script>
-    </body>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+
 </html>

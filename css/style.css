@@ -162,18 +162,43 @@ nav li{
     margin-top: 0px;
     height: 53px;
     padding: 10px ;
-
 }
 
 .repository-card a{
   display: inline-block;
   padding: 6px 85px;
-  background-color: #CFF8FF;
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: bold;
+  border: var(--border-element-solid)
+
 }
 
+.repository-card a:hover{
+    color: var(--background-color);
+    background-color: var(--text-color);
+
+}
+
+
+.repository-card a:hover::after{
+    content: "_";
+    animation: cursor-animation 1s steps(1, start) infinite;
+}
+
+@keyframes cursor-animation{
+    from{
+        opacity: 0;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
 
 .repository-card p{
   min-height: 40px;
@@ -186,6 +211,7 @@ nav li{
     border: var(--border-element-dotted);
     height: 252px;
     text-align: center;
+    margin: 0px 10px;
 }
 
 .repository-card:hover{
@@ -196,7 +222,7 @@ nav li{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:90px;
+    gap:70px;
     overflow-x:scroll;
     min-height: 300px;
 }
@@ -241,9 +267,36 @@ nav li{
 .scroll-left{
     background-color: var(--background-color);
     border: 0px;
+    padding: 0px;
 }
 
 .scroll-right{
     background-color: var(--background-color);
     border: 0px;
+    padding: 0px;
 }
+
+.projects-scroll{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contact-footer{
+    display: flex;
+    margin-top: 300px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px
+}
+
+
+
+.contact-bnt a img{
+    height: 40px;
+    width: 40px;
+}
+
+

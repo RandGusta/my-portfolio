@@ -1,4 +1,5 @@
 
+export function cardSearch(){
 fetch("https://api.github.com/orgs/university-projects-gustavo/repos")
     .then(response => response.json())
     .then(data => {
@@ -39,3 +40,4 @@ fetch("https://api.github.com/orgs/university-projects-gustavo/repos")
 
 
     })
+}

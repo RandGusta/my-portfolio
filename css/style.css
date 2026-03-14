@@ -1,9 +1,10 @@
 :root{
     --background-color:#000500; 
     --text-color: #CFF8FF;
-    --link-interaction-color: #e6eef1;
     --border-element-dotted: 2px dotted #CFF8FF;
     --border-element-solid: 2px solid #CFF8FF;
+    --transition: all 0.3s ease;
+
 
 }
 
@@ -187,21 +188,32 @@ nav li{
     text-align: center;
 }
 
+.repository-card:hover{
+    transform: scale(1.05);
+}
+
 #repositories{
     display: flex;
     justify-content: center;
     align-items: center;
     gap:90px;
-    overflow-x:auto ;
+    overflow-x:scroll;
+    min-height: 300px;
 }
 
+
+#repositories::-webkit-scrollbar{
+    height: 8px;
+    background: var(--background-color);
+
+}
 
 .code-icon{
     display: block;
     width: 50px;
     height: 50px;
     align-items: center;
-    padding-left:100px;
+    padding-left:105px;
 }
 
 
@@ -209,4 +221,29 @@ nav li{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0px;
+}
+
+
+.scroll-left a img{
+    height: 40px;
+    width: 40px;
+
+}
+
+.scroll-right a img{
+    height: 40px;
+    width: 40px;
+
+}
+
+
+.scroll-left{
+    background-color: var(--background-color);
+    border: 0px;
+}
+
+.scroll-right{
+    background-color: var(--background-color);
+    border: 0px;
 }

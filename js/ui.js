@@ -1,11 +1,5 @@
-
-export function cardSearch(){
-fetch("https://api.github.com/orgs/university-projects-gustavo/repos")
-    .then(response => response.json())
-    .then(data => {
-        const repositoryContainer = document.getElementById("repositories");
-
-        data.forEach(repository => {
+export function renderRepos(repositories, repositoryContainer){
+    repositories.forEach(repository => {
                const cardRepository = document.createElement("div");
                cardRepository.classList.add("repository-card");
 
@@ -37,7 +31,14 @@ fetch("https://api.github.com/orgs/university-projects-gustavo/repos")
                 repositoryContainer.appendChild(cardRepository);
 
         })
-
-
-    })
 }
+
+
+export function renderPokemon(pokemonContainer, imagePokemonApi, pokemonName, pokemonJson){
+    imagePokemonApi.src = pokemonJson.sprites.versions["generation-v"]["black-white"].animated.front_default;
+    pokemonName.textContent = "?";
+
+}
+
+
+

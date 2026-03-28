@@ -104,7 +104,7 @@ nav li{
 
 .intro-funfacts-wrapper{
     display: flex;
-    gap: 250px;
+    gap: 100px;
 }
 
 .funfacts{
@@ -130,6 +130,51 @@ nav li{
     z-index: -1;
 
 }
+
+#pokemon-wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: var(--border-element-dotted);
+}
+
+.pokemon-title{
+    border: var(--border-element-solid);
+    padding: 0px 40px;
+    margin: 0px;
+}
+
+.pokemon-img{
+    margin: 20px;
+    width: 120px;
+    height: 120px;
+}
+
+.silhouette{
+    filter: brightness(0) invert(1) sepia(1) hue-rotate(118deg) saturate(5) contrast(1.2);
+}
+
+.reveal{
+    filter: brightness(1) invert(0) sepia(1) hue-rotate(144deg);
+}
+
+#revealBtn{
+    all: unset;
+    font-family: 'Bitcount Grid Double', sans-serif;
+    color: var(--text-color);
+    border: var(--border-element-solid);
+    padding: 0 40px;
+    margin: 20px;
+}
+
+#revealBtn:hover{
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
+
+
+
+
 
 .funfacts-summary{
     border: var(--border-element-dotted);
@@ -310,7 +355,6 @@ nav li{
 #about_me h1 {
     position: relative;
     text-align: center;
-
     margin: 200 0 0 0;
 }
 

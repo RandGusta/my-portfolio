@@ -10,6 +10,8 @@
 
 *{
     cursor: url("../assets/images/mouse.png") 0 0, auto;
+    scroll-behavior: smooth !important;
+
 }
 
 body{
@@ -17,6 +19,50 @@ body{
     background-color: var(--background-color);
     font-family: 'Bitcount Grid Double', sans-serif;
 }
+
+body::after{
+    content: "";
+    position: fixed;
+    inset:0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0)) 50%;
+    background-size: 100% 4px;
+    animation: glitch-animation 5s linear infinite;
+}
+
+@keyframes glitch-animation {
+    0% {opacity: 1; }
+    90%{opacity: 1;}
+
+    95%{opacity: 0.99; 
+        text-shadow: 2px 0 0 red, -2px 0 0 cyan; 
+        clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);}
+
+    100%{opacity: 1;}
+}
+
+#home h1{
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20) forwards;
+
+}
+
+#home h1::after{
+    content: "_";
+    animation: cursor-animation 1s steps(1, start) infinite;
+}
+
+@keyframes typing{
+    0%{
+        width: 0;
+    }
+
+    100%{width: 22ch;}
+}
+
+
+
 
 .site-wrapper{
     border: var(--border-element-dotted);
@@ -68,14 +114,11 @@ nav a{
     padding: 5;
 }
 
-header h1{
+header{
     border: var(--border-element-solid);
-    margin-bottom: 0%;
-    padding-top: 20px;
-    padding-left: 2%;
-    margin-top: 0px;
-    margin-left: -20px;
-    margin-right: -20px;
+    margin: 0 -20px 0 -20px;
+    padding: 20px 0 0 20px;
+
 }
     
 
@@ -105,6 +148,17 @@ nav li{
 .intro-funfacts-wrapper{
     display: flex;
     gap: 100px;
+    max-width: 20000px;
+    margin-inline: auto;
+    margin-bottom: 244px;
+}
+
+.side-content{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: auto;
+    margin-right: 25px;
 }
 
 .funfacts{
@@ -181,6 +235,7 @@ nav li{
     margin-top: 0px;
     padding-bottom: 20px;
     padding-left: 10;
+    padding-right: 10;
     background-color: var(--background-color);
     position: relative;
 }
@@ -296,11 +351,9 @@ nav li{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0px;
-    margin-top: 100px;
     border: var(--border-element-solid);
     width: 500px;
-    margin-left: 500px;
+    margin: auto;
 }
 
 
@@ -383,6 +436,7 @@ nav li{
     border: var(--border-element-dotted);
     text-align: center;
     padding: 20px;
+    margin: 0px 250px;
 }
 
 .contact-footer{
@@ -390,3 +444,82 @@ nav li{
     height: auto;
 }
 
+
+@media (max-width: 800px) {
+    
+    nav {
+        width: 100%;
+        margin-left: 0;
+        height: auto;
+        justify-content: center;
+    }
+
+    #home h1 {
+    white-space: normal; 
+    font-size: 22px; 
+    word-break: break-word;
+    animation: none; 
+}
+
+    nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+
+    }
+
+    nav {
+    position: static; 
+    top: auto;
+}
+
+   .intro-title {
+        width: calc(100% - 10px);
+        max-width: 100%;
+        margin-top: 50px;
+        font-size: 20px; 
+        padding-right: 0px  ;
+    }
+   
+
+    #projects h1 {
+        width: 100%;
+        max-width: 90%;
+
+    }
+
+
+
+    .intro-funfacts-wrapper, .side-content {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        margin-right: 0;
+    }
+
+
+
+    .funfacts-title {
+        padding-right: 20px;
+        text-align: center;
+    }
+
+
+
+
+
+    .about-me-description {
+        margin: 0px 20px;
+    }
+
+
+    #projects h1 {
+        margin-top: 100px;
+    }
+
+    .contact-footer {
+        margin-top: 150px;
+    }
+
+}

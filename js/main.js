@@ -23,9 +23,12 @@ renderPokemon(pokemonContainer, imagePokemon, pokemonName, pokemonApi);
 const revealBtn = document.getElementById("revealBtn");
 
 revealBtn.addEventListener("click", () => {
+    if(imagePokemon.classList.contains("silhouette")){
+    imagePokemon.classList.remove("silhouette");
     imagePokemon.classList.toggle("reveal");
     pokemonName.textContent = pokemonApi.name;
-    imagePokemon.classList.toggle("silhouette");
+    }
+    
 })
 
 
